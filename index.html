@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <link rel="icon" href="https://pfst.cf2.poecdn.net/base/image/6ac13babb94a20caad5406813bf0831c4b83163584c77e8c2e1b296bf1088ffc?w=1024&h=768&pmaid=324334932" type="image/png">
     <title>IT HIRWA LIONEL</title>
-   //
-    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 //
+  
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -555,53 +554,6 @@
         </div>
     </form>
 
-    <script>
-        // Handle form submission
-        document.getElementById("contact-form").addEventListener("submit", function(e) {
-            e.preventDefault(); // Prevent the default form submission
-
-            const buttonText = document.getElementById("button-text");
-            const buttonLoader = document.getElementById("button-loader");
-
-            // Show the loader and hide the text
-            buttonText.classList.add("hidden");
-            buttonLoader.classList.remove("hidden");
-
-            // Collect form data
-            const formData = new FormData(this);
-
-            // Example of submitting form data (Formspree handles this automatically)
-            fetch(this.action, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                // Hide the loader and show the text again
-                buttonLoader.classList.add("hidden");
-                buttonText.classList.remove("hidden");
-
-                if (response.ok) {
-                    // Show success message
-                    alert("Your message has been sent successfully!");
-                    this.reset(); // Reset the form after submission
-                } else {
-                    // Show error message
-                    alert("Something went wrong. Please try again.");
-                }
-            })
-            .catch(error => {
-                // Handle any network or other errors
-                buttonLoader.classList.add("hidden");
-                buttonText.classList.remove("hidden");
-                alert("Error: " + error.message);
-            });
-        });
-    </script>
-                        
-                        <div id="success-message" class="hidden mt-6 p-4 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 rounded-lg">
-                            <p class="flex items-center">
-                                <i class="fas fa-check-circle mr-2"></i> Your message has been sent successfully. I'll get back to you soon!
-                            </p>
                         </div>
                         
                         <div id="error-message" class="hidden mt-6 p-4 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100 rounded-lg">
